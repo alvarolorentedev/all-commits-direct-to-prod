@@ -87,7 +87,10 @@ reveal_hugo:
 
 ### You Build it you Run it
 
-- Create DevOps Culture. Not a Dev vs Ops.
+Create DevOps Culture. Not a Dev vs Ops.
+
+<img src="/images/run_it.jpg" width="400"/>
+
 
 🟢 All Metrics
 
@@ -98,9 +101,11 @@ Devops culture is based on colaboration on runing everything as a team of develo
 
 --- 
 
-### [Broken Window] vs [Boy scout]
+### Be a Boy Scout
 
 Don't continue the same path if you think something can be done better.
+
+<img src="/images/scout.jpeg" width="300"/>
 
 🟢 All Metrics
 
@@ -296,7 +301,7 @@ You want to dig into issues logging everything will just cause you a headache tr
 
 {{% section %}}
 
-# Are we at full speed?
+# Are you at full speed?
 
 ---
 
