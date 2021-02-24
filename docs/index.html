@@ -4,14 +4,13 @@
 	<meta name="generator" content="Hugo 0.80.0" />
     <meta charset="utf-8">
 <title>All My Commits To Prod</title>
-
+<meta name="description" content="Presentation about practices">
 
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="/reveal-js/css/reset.css">
-<link rel="stylesheet" href="/reveal-js/css/reveal.css"><link rel="stylesheet" href="/reveal-js/css/theme/black.css" id="theme">
-<link rel="stylesheet" href="/highlight-js/default.min.css">
+<link rel="stylesheet" href="/reveal-js/css/reveal.css"><link rel="stylesheet" href="/reveal-hugo/themes/robot-lung.css" id="theme"><link rel="stylesheet" href="/highlight-js/color-brewer.min.css">
     
   </head>
   <body>
@@ -65,13 +64,17 @@
 <h1 id="attitude">Attitude</h1>
 </section><section>
 <h3 id="you-build-it-you-run-it">You Build it you Run it</h3>
-<p>Create DevOps Culture. Not a Dev vs Ops.</p>
+<ul>
+<li>Create DevOps Culture. Not a Dev vs Ops.</li>
+</ul>
+<p>🟢 All Metrics</p>
 <aside class="notes"><p>Mention Normally Devs are ask for delivery speed and stability
 Devops culture is based on colaboration on runing everything as a team of developers that at the same time observe operations.</p>
 </aside>
 </section><section>
 <h3 id="broken-window-vs-boy-scout">[Broken Window] vs [Boy scout]</h3>
 <p>Don&rsquo;t continue the same path if you think something can be done better.</p>
+<p>🟢 All Metrics</p>
 <aside class="notes"><p>If you see code that can be done better, or some practices that can help delivery dont shy away because you are currently not doing it, or wait for other to move the ball.</p>
 </aside>
 
@@ -89,16 +92,19 @@ Devops culture is based on colaboration on runing everything as a team of develo
 <li>Get notified when something happens</li>
 <li>Ex. Datadog + Pager Duty</li>
 </ul>
+<p>🟢 MTTR</p>
 </section><section>
 <h3 id="metrics-dashboards">Metrics Dashboards</h3>
 <ul>
 <li>Visualization</li>
 <li>Ex. Datadog</li>
 </ul>
+<p>🟢 MTTR</p>
 </section><section>
 <h3 id="metrics-dashboards-1">Metrics Dashboards</h3>
 <p>[Details] VS [Status]</p>
 <img src="/images/dashboards.jpeg" width="1000"/>
+<p>🟢 MTTR</p>
 <aside class="notes"><p>It is easy to spot where the problem is. Because we don&rsquo;t enter a cognitive overload state.</p>
 </aside>
 </section><section>
@@ -108,6 +114,7 @@ Devops culture is based on colaboration on runing everything as a team of develo
 <li>Do not log everything.</li>
 <li>Ex. Kibana</li>
 </ul>
+<p>🟢 MTTR</p>
 <aside class="notes"><p>You want to dig into issues logging everything will just cause you a headache trying to find the logs you are really interested on.</p>
 </aside>
 
@@ -121,24 +128,38 @@ Devops culture is based on colaboration on runing everything as a team of develo
 </section><section>
 <h3 id="continuous-integration-delivery--deployment">Continuous Integration, Delivery &amp; Deployment</h3>
 <p><img src="/images/continuous.png" width="1000" /></p>
+<p>🟢 Deployment Frequency
+🟢 Lead Time For Changes
+🟢 MTTR</p>
 </section><section>
 <h3 id="everything-as-code">Everything as code</h3>
 <img src="/images/infra_as_code.jpg" width="700"/>
+<p>🟢 Lead Time For Changes
+🟢 MTTR</p>
 </section><section>
 <h3 id="bluegreen-deployment">Blue/Green Deployment</h3>
 <img src="/images/blue_green.jpeg" width="1000"/>
+<p>🟢 Change Failure Rate</p>
 </section><section>
 <h3 id="canary-release">Canary Release</h3>
 <p><img src="/images/canary.jpeg" width="1000" /></p>
+<p>🟢 Change Failure Rate</p>
 </section><section>
 <h3 id="feature-toggles">Feature Toggles</h3>
 <p><img src="/images/toggles.jpeg" width="1000" /></p>
+<p>🟢 Change Failure Rate
+🟢 MTTR
+🟢 Lead Time For Changes</p>
 </section><section>
 <h3 id="environments">Environments</h3>
 <p><img src="/images/environments.jpeg" width="1000" /></p>
+<p>🟡 Change Failure Rate
+🟡 Lead Time For Changes</p>
 </section><section>
 <h3 id="single-environment">Single Environment</h3>
 <p><img src="/images/single_environment.jpeg" width="500" /></p>
+<p>🟢 MTTR
+🟢 Lead Time For Changes</p>
 
 </section>
 </section><section>
@@ -150,12 +171,14 @@ Devops culture is based on colaboration on runing everything as a team of develo
 </section><section>
 <h3 id="pyramid">Pyramid</h3>
 <p><img src="/images/pyramid.jpeg" width="700" /></p>
+<p>🟢 Change Failure Rate</p>
 </section><section>
 <h3 id="validate-in-production">Validate in Production</h3>
 <ul>
 <li>Get real behaviors of interactions</li>
 <li>Get real performance</li>
 </ul>
+<p>🟢 Change Failure Rate</p>
 
 </section>
 </section><section>
@@ -167,9 +190,11 @@ Devops culture is based on colaboration on runing everything as a team of develo
 </section><section>
 <h3 id="git-flow--trunk-base">Git Flow &amp; Trunk Base</h3>
 <p><img src="/images/trunk.png" width="700" /></p>
+<p>🟢 Deployment Frequency</p>
 </section><section>
 <h3 id="versionless-expand--contract">Versionless: Expand &amp; Contract</h3>
 <p><img src="/images/expand_contract.jpeg" width="700" /></p>
+<p>🟢 Lead Time for Changes</p>
 
 </section>
 </section><section>
@@ -183,6 +208,8 @@ Devops culture is based on colaboration on runing everything as a team of develo
 <p>Practices always change</p>
 
 </section>
+</section><section>
+<p><img src="/images/questions.jpg" width="500" /></p>
 </section>
 
   
@@ -204,8 +231,8 @@ Devops culture is based on colaboration on runing everything as a team of develo
   document.getElementsByTagName('head')[0].appendChild(link);
 </script>
 
-<script type="application/json" id="reveal-hugo-site-params">null</script>
-<script type="application/json" id="reveal-hugo-page-params">null</script>
+<script type="application/json" id="reveal-hugo-site-params">{"history":true}</script>
+<script type="application/json" id="reveal-hugo-page-params">{"custom_theme":"reveal-hugo/themes/robot-lung.css","highlight_theme":"color-brewer","margin":0.2,"templates":{"hotpink":{"background":"#FF4081","class":"hotpink"}},"transition":"slide"}</script>
 
 <script src="/reveal-js/js/reveal.js"></script>
 
