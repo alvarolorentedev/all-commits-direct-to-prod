@@ -12,6 +12,45 @@
     <link rel="stylesheet" href="/reveal-js/css/reset.css">
 <link rel="stylesheet" href="/reveal-js/css/reveal.css"><link rel="stylesheet" href="/reveal-hugo/themes/robot-lung.css" id="theme"><link rel="stylesheet" href="/highlight-js/color-brewer.min.css">
     
+
+<style>
+     
+    .reveal section pre {
+      box-shadow: none;
+      margin-top: 25px;
+      margin-bottom: 25px;
+      border: 1px solid lightgrey;
+    }
+    .reveal section pre:hover {
+      border: 1px solid grey;
+      transition: border 0.3s ease;
+    }
+    .reveal section pre > code {
+      padding: 10px;
+    }
+    .reveal table {
+      font-size: 0.65em;
+    }
+     
+    .reveal section.side-by-side h1 {
+      position: absolute;
+    }
+    .reveal section.side-by-side h1:first-of-type {
+      left: 25%;
+    }
+    .reveal section.side-by-side h1:nth-of-type(2) {
+      right: 25%;
+    }
+    .reveal section[data-background-image] a,
+    .reveal section[data-background-image] p,
+    .reveal section[data-background-image] h2 {
+      color: white;
+    }
+    .reveal section[data-background-image] a {
+      text-decoration: underline;
+    }
+    </style>
+    
   </head>
   <body>
     
@@ -217,8 +256,10 @@ Devops culture is based on colaboration on runing everything as a team of develo
 
 
 </div>
-      
-
+      <div class="line top"></div>
+<div class="line bottom"></div>
+<div class="line left"></div>
+<div class="line right"></div>
     </div>
 <script type="text/javascript" src=/reveal-hugo/object-assign.js></script>
 
@@ -233,7 +274,7 @@ Devops culture is based on colaboration on runing everything as a team of develo
 </script>
 
 <script type="application/json" id="reveal-hugo-site-params">{"history":true}</script>
-<script type="application/json" id="reveal-hugo-page-params">{"custom_theme":"reveal-hugo/themes/robot-lung.css","highlight_theme":"color-brewer","margin":0.2,"templates":{"hotpink":{"background":"#FF4081","class":"hotpink"}},"transition":"slide"}</script>
+<script type="application/json" id="reveal-hugo-page-params">{"custom_theme":"reveal-hugo/themes/robot-lung.css","highlight_theme":"color-brewer","margin":0.2,"transition":"slide"}</script>
 
 <script src="/reveal-js/js/reveal.js"></script>
 
@@ -280,6 +321,15 @@ Devops culture is based on colaboration on runing everything as a team of develo
 
 
 
+    
+
+
+<script type="text/javascript">
+    
+    Reveal.addEventListener('slidechanged', function(event) {
+      console.log("🎞️ Slide is now " + event.indexh);
+    });
+    </script>
     
     
   </body>

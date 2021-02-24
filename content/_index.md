@@ -7,10 +7,6 @@ reveal_hugo:
     margin: 0.2
     highlight_theme: "color-brewer"
     transition: "slide"
-    templates:
-        hotpink:
-            class: "hotpink"
-            background: "#FF4081"
 ---
 
 # Achieving Delivery Acceleration
