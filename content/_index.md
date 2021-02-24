@@ -81,6 +81,8 @@ reveal_hugo:
 
 # Attitude
 
+<img src="/images/positive_attitude.jpg" width="400"/>
+
 --- 
 
 ### You Build it you Run it
