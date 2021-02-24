@@ -1,6 +1,16 @@
 ---
 title: "All My Commits To Prod"
 outputs: ["Reveal"]
+description: "Presentation about practices"
+reveal_hugo:
+    custom_theme: "reveal-hugo/themes/robot-lung.css"
+    margin: 0.2
+    highlight_theme: "color-brewer"
+    transition: "slide"
+    templates:
+        hotpink:
+            class: "hotpink"
+            background: "#FF4081"
 ---
 
 # Achieving Delivery Acceleration
@@ -75,7 +85,9 @@ outputs: ["Reveal"]
 
 ### You Build it you Run it
 
-Create DevOps Culture. Not a Dev vs Ops.
+- Create DevOps Culture. Not a Dev vs Ops.
+
+🟢 All Metrics
 
 {{% note %}}
 Mention Normally Devs are ask for delivery speed and stability
@@ -87,6 +99,8 @@ Devops culture is based on colaboration on runing everything as a team of develo
 ### [Broken Window] vs [Boy scout]
 
 Don't continue the same path if you think something can be done better.
+
+🟢 All Metrics
 
 {{% note %}}
 If you see code that can be done better, or some practices that can help delivery dont shy away because you are currently not doing it, or wait for other to move the ball.
@@ -110,6 +124,8 @@ If you see code that can be done better, or some practices that can help deliver
 - Get notified when something happens
 - Ex. Datadog + Pager Duty
 
+🟢 MTTR
+
 --- 
 
 ### Metrics Dashboards
@@ -117,12 +133,16 @@ If you see code that can be done better, or some practices that can help deliver
 - Visualization
 - Ex. Datadog
 
+🟢 MTTR
+
 --- 
 
 ### Metrics Dashboards
 [Details] VS [Status]
 
 <img src="/images/dashboards.jpeg" width="1000"/>
+
+🟢 MTTR
 
 {{% note %}}
 It is easy to spot where the problem is. Because we don't enter a cognitive overload state.
@@ -135,6 +155,8 @@ It is easy to spot where the problem is. Because we don't enter a cognitive over
 - To go in depth in issues.
 - Do not log everything.
 - Ex. Kibana
+
+🟢 MTTR
 
 {{% note %}}
 You want to dig into issues logging everything will just cause you a headache trying to find the logs you are really interested on.
@@ -156,11 +178,18 @@ You want to dig into issues logging everything will just cause you a headache tr
 
 <img src="/images/continuous.png" width="1000" />
 
+🟢 Deployment Frequency
+🟢 Lead Time For Changes
+🟢 MTTR
+
 ---
 
 ### Everything as code
 
 <img src="/images/infra_as_code.jpg" width="700"/>
+
+🟢 Lead Time For Changes
+🟢 MTTR
 
 ---
 
@@ -168,11 +197,15 @@ You want to dig into issues logging everything will just cause you a headache tr
 
 <img src="/images/blue_green.jpeg" width="1000"/>
 
+🟢 Change Failure Rate
+
 --- 
 
 ### Canary Release 
 
 <img src="/images/canary.jpeg" width="1000" />
+
+🟢 Change Failure Rate
 
 --- 
 
@@ -180,11 +213,18 @@ You want to dig into issues logging everything will just cause you a headache tr
 
 <img src="/images/toggles.jpeg" width="1000" />
 
+🟢 Change Failure Rate
+🟢 MTTR
+🟢 Lead Time For Changes
+
 ---
 
 ### Environments
 
 <img src="/images/environments.jpeg" width="1000" />
+
+🟡 Change Failure Rate
+🟡 Lead Time For Changes
 
 ---
 
@@ -192,6 +232,8 @@ You want to dig into issues logging everything will just cause you a headache tr
 
 <img src="/images/single_environment.jpeg" width="500" />
 
+🟢 MTTR
+🟢 Lead Time For Changes
 
 {{% /section %}}
 
@@ -209,12 +251,16 @@ You want to dig into issues logging everything will just cause you a headache tr
 
 <img src="/images/pyramid.jpeg" width="700" />
 
+🟢 Change Failure Rate
+
 ---
 
 ### Validate in Production
 
 - Get real behaviors of interactions
 - Get real performance
+
+🟢 Change Failure Rate
 
 {{% /section %}}
 
@@ -232,13 +278,15 @@ You want to dig into issues logging everything will just cause you a headache tr
 
 <img src="/images/trunk.png" width="700" />
 
+🟢 Deployment Frequency
+
 ---
 
 ### Versionless: Expand & Contract
 
-
 <img src="/images/expand_contract.jpeg" width="700" />
 
+🟢 Lead Time for Changes
 
 {{% /section %}}
 
@@ -258,3 +306,6 @@ You want to dig into issues logging everything will just cause you a headache tr
 
 {{% /section %}}
 
+---
+
+<img src="/images/questions.jpg" width="500" />

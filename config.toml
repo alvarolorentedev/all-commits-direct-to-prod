@@ -1,7 +1,7 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "My New Hugo Site"
-
+disableKinds = ["sitemap", "RSS"]
 theme = "reveal-hugo"
 
 [markup.goldmark.renderer]
@@ -11,3 +11,6 @@ unsafe = true
 baseName = "index"
 mediaType = "text/html"
 isHTML = true
+
+[params.reveal_hugo]
+history = true
