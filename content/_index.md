@@ -12,17 +12,14 @@ reveal_hugo:
 # Achieving Delivery Acceleration
 ### why I do all in Prod
 
-<small>Created by [Alvaro](http://kanekotic.xom) ([@kanekotic](http://twitter.com/kanekotic)) @[Chartboost](chartboost.com).
+<small>Created by [Alvaro](https://kanekotic.xom) ([@kanekotic](https://twitter.com/kanekotic)) @[Chartboost](https://chartboost.com).
 </small>
 
 ---
 
-# Am I crazy or What?!
+# Am I crazy?!
 
 <img src="/images/crazyvswise.png" width="500"/>
-
-{{% note %}}
-{{% /note %}}
 
 ---
 
@@ -32,9 +29,6 @@ reveal_hugo:
 
 <img src="/images/why.jpg" width="700"/>
 
-{{% note %}}
-{{% /note %}}
-
 ---
 
 ### Team & Organizational Performance
@@ -42,6 +36,9 @@ reveal_hugo:
 <img src="/images/accelerate.jpg" width="320"/>
 
 {{% note %}}
+- Accelerate a great book that is extract of the state of devops report
+- It does not just speak about Technology but also about organization and culture
+- Read it
 {{% /note %}}
 
 ---
@@ -51,16 +48,21 @@ reveal_hugo:
 <img src="/images/key_metrics.png" width="550"/>
 
 {{% note %}}
+- This are metrics that have help correlate high performance teams
+- They are based on trying to measure speed and stability
 {{% /note %}}
 
 ---
 
 ### 4 key metrics: Word of caution
 
-- Not a one size fit all solution.
-- Useful for continuous improvement, No reporting.
+<img src="/images/metrics_caution.png" width="335"/>
 
 {{% note %}}
+- Not a one size fit all solution.
+- Useful for continuous improvement, No reporting.
+- As all metrics they can be abused by management
+- The solution and practices are not always the same for all teams
 {{% /note %}}
 
 {{% /section %}}
@@ -91,8 +93,9 @@ Create DevOps Culture. Not a Dev vs Ops.
 🟢 All Metrics
 
 {{% note %}}
-Mention Normally Devs are ask for delivery speed and stability
-Devops culture is based on colaboration on runing everything as a team of developers that at the same time observe operations.
+- Mention Normally developers are ask for delivery speed, and operations counterpart stability.
+- Devops culture is based on collaboration on running everything as a team of developers that at the same time observe operations.
+- Ops need to become a tool creator for teams, and not run their operations.
 {{% /note %}}
 
 --- 
@@ -107,6 +110,20 @@ Don't continue the same path if you think something can be done better.
 
 {{% note %}}
 If you see code that can be done better, or some practices that can help delivery dont shy away because you are currently not doing it, or wait for other to move the ball.
+{{% /note %}}
+
+--- 
+
+### Learn to adapt
+
+Not all problems need the same tool.
+
+<img src="/images/buddhist.jpg" width="400"/>
+
+🟢 All Metrics
+
+{{% note %}}
+Not all problems are solve the same so find your tools
 {{% /note %}}
 
 {{% /section %}}
