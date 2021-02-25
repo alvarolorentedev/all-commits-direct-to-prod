@@ -109,7 +109,8 @@ Don't continue the same path if you think something can be done better.
 🟢 All Metrics
 
 {{% note %}}
-If you see code that can be done better, or some practices that can help delivery dont shy away because you are currently not doing it, or wait for other to move the ball.
+- If you see code that can be done better, or some practices that can help delivery don't shy away because you are currently not doing it
+- If you don't do it nobody will
 {{% /note %}}
 
 --- 
@@ -123,7 +124,7 @@ Not all problems need the same tool.
 🟢 All Metrics
 
 {{% note %}}
-Not all problems are solve the same so find your tools
+- Not all problems are solve the same so find your tools
 {{% /note %}}
 
 {{% /section %}}
@@ -140,11 +141,14 @@ Not all problems are solve the same so find your tools
 
 ### Alarms
 
-- Be lazy
 - Get notified when something happens
 - Ex. Datadog + Pager Duty
 
 🟢 MTTR
+
+{{% note %}}
+- Alarms allow you to be lazy. you don't need to jump or spend time and brain power if its not required.
+{{% /note %}}
 
 --- 
 
@@ -155,17 +159,23 @@ Not all problems are solve the same so find your tools
 
 🟢 MTTR
 
+{{% note %}}
+- When something happens dashboard can gide you to where might the problem be.
+- You need to learn how to read them and there are multiple types.
+{{% /note %}}
+
 --- 
 
 ### Metrics Dashboards
-[Details] VS [Status]
+Details & Status
 
 <img src="/images/dashboards.jpeg" width="1000"/>
 
 🟢 MTTR
 
 {{% note %}}
-It is easy to spot where the problem is. Because we don't enter a cognitive overload state.
+- It is easy to spot where the problem is in a status dashboard. 
+- Root Cause is we don't enter a cognitive overload state like with the details.
 {{% /note %}}
 
 --- 
@@ -179,7 +189,8 @@ It is easy to spot where the problem is. Because we don't enter a cognitive over
 🟢 MTTR
 
 {{% note %}}
-You want to dig into issues logging everything will just cause you a headache trying to find the logs you are really interested on.
+- This is the lower level you want to go. It should tell you where in the code is your issue.
+- Do not log everything, just what will help you fix things. It can complicate finding what is happening if you have tons of logs.
 {{% /note %}}
 
 {{% /section %}}
@@ -196,11 +207,19 @@ You want to dig into issues logging everything will just cause you a headache tr
 
 ### Continuous Integration, Delivery & Deployment
 
-<img src="/images/continuous.png" width="1000" />
+<img src="/images/continuous.png" width="1000" style="background-color:white;" />
 
 🟢 Deployment Frequency
 🟢 Lead Time For Changes
 🟢 MTTR
+
+{{% note %}}
+- This are steps in a journey.
+- Continuous integration: It allows you to make sure you reproduce what you can do local somewhere else.
+- Continuous Delivery: Now that you reproduce things get them somewhere that can be tested.
+- Continuous Deployment: Deliver to your clients and not only to your team.
+- The more mature a team is in the journey the more confident they are of going the next definition
+{{% /note %}}
 
 ---
 
@@ -211,6 +230,12 @@ You want to dig into issues logging everything will just cause you a headache tr
 🟢 Lead Time For Changes
 🟢 MTTR
 
+{{% note %}}
+- This helps to become a devops team and not just a devs and ops segmented group.
+- If you control all the parts you are building the capabilities into the solution. If not you are wrapping around things that might not fit.
+- It affects both stability and speed. Your infrastructure follows your code, and vice versa.
+{{% /note %}}
+
 ---
 
 ### Blue/Green Deployment
@@ -219,6 +244,10 @@ You want to dig into issues logging everything will just cause you a headache tr
 
 🟢 Change Failure Rate
 
+{{% note %}}
+- Blue green is not just a tool to minimize downtime, it can also be used as a tool to minimize failure rate.
+{{% /note %}}
+
 --- 
 
 ### Canary Release 
@@ -226,6 +255,13 @@ You want to dig into issues logging everything will just cause you a headache tr
 <img src="/images/canary.jpeg" width="1000" />
 
 🟢 Change Failure Rate
+
+{{% note %}}
+- Helps Minimize the risk of new features braking things.
+- Canary releases come from miners practices. If the canary dies the human might also die.
+- It gives you control at infrastructure level and is highly tide to your release capabilities.
+- you can probably have issues with multiple canaries with different combination of features. 
+{{% /note %}}
 
 --- 
 
@@ -237,6 +273,15 @@ You want to dig into issues logging everything will just cause you a headache tr
 🟢 MTTR
 🟢 Lead Time For Changes
 
+
+{{% note %}}
+- The intention is similar to canary releases. Helps Minimize the risk of new features braking things.
+- It gives you control at code level. 
+- 2 types: release (on/off), context (Higher level of granularity user Ids, location, disk space...)
+- Allows you to disconnect from the release cycle. So you can react faster.
+- Enables other capabilities like A/B testing, and testing in prod.
+{{% /note %}}
+
 ---
 
 ### Environments
@@ -246,6 +291,14 @@ You want to dig into issues logging everything will just cause you a headache tr
 🟡 Change Failure Rate
 🟡 Lead Time For Changes
 
+{{% note %}}
+- Adds 'safeguards' and places to test that are different than the users environment.
+- They are difficult to maintain and align between different teams, it can lead to strange behavior.
+- Difficult to validate the end result.
+- They have a dollar cost attached.
+- Normally to solve an issue you need to go through all the environments, affecting the time to get solutions out.
+{{% /note %}}
+
 ---
 
 ### Single Environment
@@ -254,6 +307,14 @@ You want to dig into issues logging everything will just cause you a headache tr
 
 🟢 MTTR
 🟢 Lead Time For Changes
+
+{{% note %}}
+- It allows you to control what data is for test.
+- A single environment ensures continues alignment.
+- Smaller $ cost.
+- You get the real performance & behavior.
+- Achieve this is to have a flag across your system
+{{% /note %}}
 
 {{% /section %}}
 
@@ -272,6 +333,13 @@ You want to dig into issues logging everything will just cause you a headache tr
 <img src="/images/pyramid.jpeg" width="700" />
 
 🟢 Change Failure Rate
+
+{{% note %}}
+- Probably the most important of all.
+- Tests are not just manual or unit. There are tons of things that need to be validated.
+- All validations should be reproducible.
+- This is the main thing that brings stability as it brings quality into the codebase
+{{% /note %}}
 
 ---
 
@@ -300,6 +368,15 @@ You want to dig into issues logging everything will just cause you a headache tr
 
 🟢 Deployment Frequency
 
+{{% note %}}
+- Long lived branches are difficult to merge.
+- When you merge sometimes you need to revalidate all the work.
+- On only branch force you to think about small units. 
+- You get the entire picture of your code all the time.
+- There are minimal merge conflicts.
+- I am not doing toggles can I do trunk based development. There are other ways like abstractions that are not connected that achieve the same goal.
+{{% /note %}}
+
 ---
 
 ### Versionless: Expand & Contract
@@ -307,6 +384,14 @@ You want to dig into issues logging everything will just cause you a headache tr
 <img src="/images/expand_contract.jpeg" width="700" />
 
 🟢 Lead Time for Changes
+
+
+{{% note %}}
+- Software evolves continuously, so things will get deprecated and be replaced all the time.
+- Versions allow you to separate changes. But the more versions the more complex the maintenance and more costly.
+- Expand an contract allows you to do parallel changes. 
+- keep compatibility till nobody uses it.
+{{% /note %}}
 
 {{% /section %}}
 

@@ -125,14 +125,19 @@
 <p>Don&rsquo;t continue the same path if you think something can be done better.</p>
 <img src="/images/scout.jpeg" width="300"/>
 <p>🟢 All Metrics</p>
-<aside class="notes"><p>If you see code that can be done better, or some practices that can help delivery dont shy away because you are currently not doing it, or wait for other to move the ball.</p>
+<aside class="notes"><ul>
+<li>If you see code that can be done better, or some practices that can help delivery don&rsquo;t shy away because you are currently not doing it</li>
+<li>If you don&rsquo;t do it nobody will</li>
+</ul>
 </aside>
 </section><section>
 <h3 id="learn-to-adapt">Learn to adapt</h3>
 <p>Not all problems need the same tool.</p>
 <img src="/images/buddhist.jpg" width="400"/>
 <p>🟢 All Metrics</p>
-<aside class="notes"><p>Not all problems are solve the same so find your tools</p>
+<aside class="notes"><ul>
+<li>Not all problems are solve the same so find your tools</li>
+</ul>
 </aside>
 
 </section>
@@ -145,11 +150,14 @@
 </section><section>
 <h3 id="alarms">Alarms</h3>
 <ul>
-<li>Be lazy</li>
 <li>Get notified when something happens</li>
 <li>Ex. Datadog + Pager Duty</li>
 </ul>
 <p>🟢 MTTR</p>
+<aside class="notes"><ul>
+<li>Alarms allow you to be lazy. you don&rsquo;t need to jump or spend time and brain power if its not required.</li>
+</ul>
+</aside>
 </section><section>
 <h3 id="metrics-dashboards">Metrics Dashboards</h3>
 <ul>
@@ -157,12 +165,20 @@
 <li>Ex. Datadog</li>
 </ul>
 <p>🟢 MTTR</p>
+<aside class="notes"><ul>
+<li>When something happens dashboard can gide you to where might the problem be.</li>
+<li>You need to learn how to read them and there are multiple types.</li>
+</ul>
+</aside>
 </section><section>
 <h3 id="metrics-dashboards-1">Metrics Dashboards</h3>
-<p>[Details] VS [Status]</p>
+<p>Details &amp; Status</p>
 <img src="/images/dashboards.jpeg" width="1000"/>
 <p>🟢 MTTR</p>
-<aside class="notes"><p>It is easy to spot where the problem is. Because we don&rsquo;t enter a cognitive overload state.</p>
+<aside class="notes"><ul>
+<li>It is easy to spot where the problem is in a status dashboard.</li>
+<li>Root Cause is we don&rsquo;t enter a cognitive overload state like with the details.</li>
+</ul>
 </aside>
 </section><section>
 <h3 id="logs">Logs</h3>
@@ -172,7 +188,10 @@
 <li>Ex. Kibana</li>
 </ul>
 <p>🟢 MTTR</p>
-<aside class="notes"><p>You want to dig into issues logging everything will just cause you a headache trying to find the logs you are really interested on.</p>
+<aside class="notes"><ul>
+<li>This is the lower level you want to go. It should tell you where in the code is your issue.</li>
+<li>Do not log everything, just what will help you fix things. It can complicate finding what is happening if you have tons of logs.</li>
+</ul>
 </aside>
 
 </section>
@@ -184,39 +203,88 @@
 <img src="/images/deploy_prod.jpg" width="300"/>
 </section><section>
 <h3 id="continuous-integration-delivery--deployment">Continuous Integration, Delivery &amp; Deployment</h3>
-<p><img src="/images/continuous.png" width="1000" /></p>
+<p><img src="/images/continuous.png" width="1000" style="background-color:white;" /></p>
 <p>🟢 Deployment Frequency
 🟢 Lead Time For Changes
 🟢 MTTR</p>
+<aside class="notes"><ul>
+<li>This are steps in a journey.</li>
+<li>Continuous integration: It allows you to make sure you reproduce what you can do local somewhere else.</li>
+<li>Continuous Delivery: Now that you reproduce things get them somewhere that can be tested.</li>
+<li>Continuous Deployment: Deliver to your clients and not only to your team.</li>
+<li>The more mature a team is in the journey the more confident they are of going the next definition</li>
+</ul>
+</aside>
 </section><section>
 <h3 id="everything-as-code">Everything as code</h3>
 <img src="/images/infra_as_code.jpg" width="700"/>
 <p>🟢 Lead Time For Changes
 🟢 MTTR</p>
+<aside class="notes"><ul>
+<li>This helps to become a devops team and not just a devs and ops segmented group.</li>
+<li>If you control all the parts you are building the capabilities into the solution. If not you are wrapping around things that might not fit.</li>
+<li>It affects both stability and speed. Your infrastructure follows your code, and vice versa.</li>
+</ul>
+</aside>
 </section><section>
 <h3 id="bluegreen-deployment">Blue/Green Deployment</h3>
 <img src="/images/blue_green.jpeg" width="1000"/>
 <p>🟢 Change Failure Rate</p>
+<aside class="notes"><ul>
+<li>Blue green is not just a tool to minimize downtime, it can also be used as a tool to minimize failure rate.</li>
+</ul>
+</aside>
 </section><section>
 <h3 id="canary-release">Canary Release</h3>
 <p><img src="/images/canary.jpeg" width="1000" /></p>
 <p>🟢 Change Failure Rate</p>
+<aside class="notes"><ul>
+<li>Helps Minimize the risk of new features braking things.</li>
+<li>Canary releases come from miners practices. If the canary dies the human might also die.</li>
+<li>It gives you control at infrastructure level and is highly tide to your release capabilities.</li>
+<li>you can probably have issues with multiple canaries with different combination of features.</li>
+</ul>
+</aside>
 </section><section>
 <h3 id="feature-toggles">Feature Toggles</h3>
 <p><img src="/images/toggles.jpeg" width="1000" /></p>
 <p>🟢 Change Failure Rate
 🟢 MTTR
 🟢 Lead Time For Changes</p>
+<aside class="notes"><ul>
+<li>The intention is similar to canary releases. Helps Minimize the risk of new features braking things.</li>
+<li>It gives you control at code level.</li>
+<li>2 types: release (on/off), context (Higher level of granularity user Ids, location, disk space&hellip;)</li>
+<li>Allows you to disconnect from the release cycle. So you can react faster.</li>
+<li>Enables other capabilities like A/B testing, and testing in prod.</li>
+</ul>
+</aside>
 </section><section>
 <h3 id="environments">Environments</h3>
 <p><img src="/images/environments.jpeg" width="1000" /></p>
 <p>🟡 Change Failure Rate
 🟡 Lead Time For Changes</p>
+<aside class="notes"><ul>
+<li>Adds &lsquo;safeguards&rsquo; and places to test that are different than the users environment.</li>
+<li>They are difficult to maintain and align between different teams, it can lead to strange behavior.</li>
+<li>Difficult to validate the end result.</li>
+<li>They have a dollar cost attached.</li>
+<li>Normally to solve an issue you need to go through all the environments, affecting the time to get solutions out.</li>
+</ul>
+</aside>
 </section><section>
 <h3 id="single-environment">Single Environment</h3>
 <p><img src="/images/single_environment.jpeg" width="500" /></p>
 <p>🟢 MTTR
 🟢 Lead Time For Changes</p>
+<aside class="notes"><ul>
+<li>It allows you to control what data is for test.</li>
+<li>A single environment ensures continues alignment.</li>
+<li>Smaller $ cost.</li>
+<li>You get the real performance &amp; behavior.</li>
+<li>Achieve this is to have a flag across your system</li>
+</ul>
+</aside>
 
 </section>
 </section><section>
@@ -229,6 +297,13 @@
 <h3 id="pyramid">Pyramid</h3>
 <p><img src="/images/pyramid.jpeg" width="700" /></p>
 <p>🟢 Change Failure Rate</p>
+<aside class="notes"><ul>
+<li>Probably the most important of all.</li>
+<li>Tests are not just manual or unit. There are tons of things that need to be validated.</li>
+<li>All validations should be reproducible.</li>
+<li>This is the main thing that brings stability as it brings quality into the codebase</li>
+</ul>
+</aside>
 </section><section>
 <h3 id="validate-in-production">Validate in Production</h3>
 <ul>
@@ -248,10 +323,26 @@
 <h3 id="git-flow--trunk-base">Git Flow &amp; Trunk Base</h3>
 <p><img src="/images/trunk.png" width="700" /></p>
 <p>🟢 Deployment Frequency</p>
+<aside class="notes"><ul>
+<li>Long lived branches are difficult to merge.</li>
+<li>When you merge sometimes you need to revalidate all the work.</li>
+<li>On only branch force you to think about small units.</li>
+<li>You get the entire picture of your code all the time.</li>
+<li>There are minimal merge conflicts.</li>
+<li>I am not doing toggles can I do trunk based development. There are other ways like abstractions that are not connected that achieve the same goal.</li>
+</ul>
+</aside>
 </section><section>
 <h3 id="versionless-expand--contract">Versionless: Expand &amp; Contract</h3>
 <p><img src="/images/expand_contract.jpeg" width="700" /></p>
 <p>🟢 Lead Time for Changes</p>
+<aside class="notes"><ul>
+<li>Software evolves continuously, so things will get deprecated and be replaced all the time.</li>
+<li>Versions allow you to separate changes. But the more versions the more complex the maintenance and more costly.</li>
+<li>Expand an contract allows you to do parallel changes.</li>
+<li>keep compatibility till nobody uses it.</li>
+</ul>
+</aside>
 
 </section>
 </section><section>
