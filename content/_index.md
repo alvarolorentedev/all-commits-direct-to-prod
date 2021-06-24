@@ -12,7 +12,7 @@ reveal_hugo:
 # Achieving Delivery Acceleration
 ### why I do all in Prod
 
-<small>Created by [Alvaro](https://kanekotic.xom) ([@kanekotic](https://twitter.com/kanekotic)) @[Chartboost](https://chartboost.com).
+<small>Created by [Alvaro](https://kanekotic.xom) ([@kanekotic](https://twitter.com/kanekotic)) @[ClimatePartner](https://www.climatepartner.com).
 </small>
 
 ---
